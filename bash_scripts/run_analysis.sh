@@ -731,7 +731,7 @@ anat_analysis()
 # Call script for diffusion analysis
 diff_analysis()
 {
-	/md1/ing/bin/NeuroImage/diff_analysis.sh $DATA $SUB $SEQORDER
+	$SCRIPT_DIR/diff_analysis.sh $DATA $SUB $SEQORDER
 }
 
 #------------------------

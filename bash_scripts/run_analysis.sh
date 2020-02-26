@@ -41,10 +41,11 @@ SLICE_THIC=2.5		# Slice thickness of T2TRA (2.5mm or 3mm)
 RUNSLICE=1				# Slice-by-slice correction
 BAD_T2SAG_SEG=0		# Result of T2SAG segmentation (if bad, the variable is set to 1 and T2SAG labeling, registration to template and T2 fusing is skipped)
 
-NIFTI=${SCRIPT_DIR}/NIfTI_tools					# nifti tools for matlab
-BINDIR=${SCRIPT_DIR}										# our bash scripts
-SCTDIR=/usr/local/lib/sct								# path to SCT
-ANTSDIR=/usr/local/lib/ants_v2.1.0			# BiasFiledCorrection path (part of ANTS)
+NIFTI=/md1/matlab_toolbox/NIfTI_tools				# nifti tools for matlab
+BINDIR=${SCRIPT_DIR}												# our bash scripts
+MATLABDIR=${SCRIPT_DIR}/../matlab_scripts		# our matlab scripts
+SCTDIR=/usr/local/lib/sct										# path to SCT
+ANTSDIR=/usr/local/lib/ants_v2.1.0				# BiasFiledCorrection path (part of ANTS)
 PATH=$ANTSDIR:$BINDIR:$PATH
 
 # Trap kill from check_input function if SIGUSR1 is set
@@ -278,8 +279,8 @@ anat_analysis()
 		exe "gunzip -f T2SAG_thr_bin.nii.gz" v
 
 		# Call m-file fill_holes.m for filling holes in thresholded binarized image and remove small noise areas
-		exe "run_matlab addpath('$BINDIR','$NIFTI'),fill_holes('T2TRA_thr_bin'),exit" v
-		exe "run_matlab addpath('$BINDIR','$NIFTI'),fill_holes('T2SAG_thr_bin'),exit" v
+		exe "run_matlab addpath('$MATLABDIR','$NIFTI'),fill_holes('T2TRA_thr_bin'),exit" v
+		exe "run_matlab addpath('$MATLABDIR','$NIFTI'),fill_holes('T2SAG_thr_bin'),exit" v
 
 		exe "gzip -f T2TRA_thr_bin.nii T2TRA_thr_bin_fill.nii T2SAG_thr_bin.nii T2SAG_thr_bin_fill.nii" v
 
@@ -319,7 +320,7 @@ anat_analysis()
 
 			cd ${DATA}/${SUB}/Results/Anat_Preproc
 
-			exe "run_matlab addpath('$BINDIR','$NIFTI'),T2TRA_shift_correction_interp('T2TRA_thr_bias_corr','$BINDIR'),exit" v	# Call matlab script for slice-by-slice correction (based on split T2TRA into odd and even slices)
+			exe "run_matlab addpath('$MATLABDIR','$NIFTI'),T2TRA_shift_correction_interp('T2TRA_thr_bias_corr','$BINDIR'),exit" v	# Call matlab script for slice-by-slice correction (based on split T2TRA into odd and even slices)
 
 			exe "fslmaths T2TRA_thr_bias_corr_odd_interp.nii -add T2TRA_thr_bias_corr_reg.nii.gz -div 2 T2TRA_thr_bias_corr_avg.nii.gz" v
 

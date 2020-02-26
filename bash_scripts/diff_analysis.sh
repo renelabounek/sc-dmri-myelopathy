@@ -20,7 +20,7 @@
 #-----------------------------------------------------------------------------------------------------------
 
 # Some global variables
-VERSION=25-02-2020
+VERSION=26-02-2020
 
 SCT_VER_GIT="7af1436782a5ea87758ac893a5f658d58eb3c60a"		# SCT v3.2.3 - https://github.com/neuropoly/spinalcordtoolbox/commit/7af1436782a5ea87758ac893a5f658d58eb3c60a
 
@@ -29,6 +29,8 @@ SCRIPT_DIR="$(cd "$(dirname $0)";pwd -P)"			# get directory where is this script
 LINE="===================================================================================================================="
 
 DEEPSEG=0			# Type of SC segmentation: 0 - sct_propseg, 1 - sct_deepseg_sc
+
+BINDIR=${SCRIPT_DIR}												# our bash scripts
 
 pidlist=""		# list of process IDs
 

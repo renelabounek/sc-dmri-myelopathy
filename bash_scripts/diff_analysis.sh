@@ -1,9 +1,15 @@
 #!/bin/bash
 
-# This script is called automatically from run_analysis.sh script or can be run manually:
-#			/md1/ing/bin/NeuroImage/diff_analysis.sh $DATA $SUB $SEQORDER
-
 #-----------------------------------------------------------------------------------------------------------
+# This script is called automatically from run_analysis.sh script or can be run manually.
+# USAGE:
+#			diff_analysis.sh <DATA_FOLDER> <SUB_ID> <SEQ_order>
+#						- DATA_FOLDER - folder containing individual subjects data
+#						- SUB_ID - name of the subject folder with raw (nifti) anatomical and diffusion data
+#						- SEQORDER - order of diffusion protocols (ZOOMit_interp, ZOOMit_interp_moco, ZOOMit_nointerp, ZOOMit_nointerp_moco, RESOLVE)
+# EXAMPLE:
+#			diff_analysis.sh /home/user/data 1234B 11001
+#
 # Script for performing analysis of spinal cord diffusion data (ZOOMit and/or RESOLVE) only in diff space.
 # Analysis contains:
 #		1) Diffusion preprocessing (merge AP and PA b0 images) with or without motion correction by sct_dmri_moco
@@ -20,7 +26,7 @@
 #-----------------------------------------------------------------------------------------------------------
 
 # Some global variables
-VERSION=26-02-2020
+VERSION=01-03-2020
 
 SCT_VER_GIT="7af1436782a5ea87758ac893a5f658d58eb3c60a"		# SCT v3.2.3 - https://github.com/neuropoly/spinalcordtoolbox/commit/7af1436782a5ea87758ac893a5f658d58eb3c60a
 
@@ -47,7 +53,7 @@ init()
 			echo -e "$LINE\nHelp for script performing analysis of the spinal cord diffusion data (ZOOMit and/or RESOLVE), version $VERSION."
 			echo -e "Analysis contains:\n\tdiffusion preprocessing (merge AP and PA b0 images) with or withnout motion correction by sct_dmri_moco\n\ttopup and eddy (with whole FOV or with manually segmented mask of SC from topup_mean image)\n\tDTI estimation (using dtifit)\n\tregistration between T2TRA and DIFF spaces\n\tvertebrae labeling in DIFF space\n\tmasking results from dtifit by mask of SC"
 			echo -e "REQUIREMENTS: Installed bash interpreter, Matlab, FSL and Spinal Cord Toolbox libraries.\n$LINE"
-			echo -e "USAGE:\n\n$SCRIPT_NAME <path to subjects directory> <subject> <diff. seq. order>\n\nEXAMPLE:\n\n$SCRIPT_NAME /md2/NA-CSD 2007B 11001"
+			echo -e "USAGE:\n\n$SCRIPT_NAME <DATA_FOLDER> <SUB_ID> <SEQ_order>\n\nEXAMPLE:\n\n$SCRIPT_NAME /home/user/data 1234B 11001"
 			echo -e "or\n$SCRIPT_NAME /md2/NA-CSD subjects.txt\n$LINE"
 			echo -e "Valosek, Labounek 2018\tfMRI laboratory, Olomouc, CZ\n$LINE"
 		elif [ $# -eq 1 ] && [ $1 != "-h" ] || [ $# -gt 3 ];then

@@ -1,18 +1,18 @@
 #!/bin/bash
 
 #-----------------------------------------------------------------------------------------------------------
-# Script for processing of the spinal cord data
+# Script for processing of the anatomical MRI spinal cord data
 # USAGE:
-# 		run_analysis_final.sh <DATA_FOLDER> <SUB_ID> <SEQ_order>
+# 		run_analysis.sh <DATA_FOLDER> <SUB_ID> <SEQ_order>
 #						- DATA_FOLDER - folder containing individual subjects data
 #						- SUB_ID - name of the subject folder with raw (nifti) anatomical and diffusion data
 #						- SEQORDER - order of diffusion protocols (ZOOMit_interp, ZOOMit_interp_moco, ZOOMit_nointerp, ZOOMit_nointerp_moco, RESOLVE)
 # EXAMPLE:
-#			run_analysis_final.sh /home/user/data 1234B 11001
+#			run_analysis.sh /home/user/data 1234B 11001
 #
 # Analysis contains:
 #		1) Bias field correction of orignal T2TRA and T2SAG images using N4BiasFieldCorrection tool (part of ANTS) and thresholding of low values
-# 	2) Slice-by-slice correction of zig-zag artifact of T2TRA image (could be switched off inside script)
+#		2) Slice-by-slice correction of zig-zag artifact of T2 transversal (T2TRA) image (could be switched off inside script)
 # 	3) Resampling and cropping of T2 sagittal image (T2SAG) (for fitting with resolution of T2TRA image)
 # 	4) Spinal cord segmentation of T2 sagittal image (T2SAG) either by sct_deepseg_sc or sct_propseg function (could be set inside script)
 # 	5) Vertebrae labeling of T2SAG
@@ -28,7 +28,7 @@
 #-----------------------------------------------------------------------------------------------------------
 
 # Some global variable
-VERSION=25-02-2020
+VERSION=01-03-2020
 
 SCT_VER_GIT="7af1436782a5ea87758ac893a5f658d58eb3c60a"		# SCT v3.2.3 - https://github.com/neuropoly/spinalcordtoolbox/commit/7af1436782a5ea87758ac893a5f658d58eb3c60a
 
@@ -55,7 +55,7 @@ print_help()
 {
 
 	echo -e "$LINE\nHelp for script performing anatomical analysis of the spinal cord data, version $VERSION."
-	echo -e "USAGE:\n\t$SCRIPT_NAME <DATA_FOLDER> <SUB_ID> <SEQ_order>\nexample:\n\t$SCRIPT_NAME /md2/CSD 2256B 11001"
+	echo -e "USAGE:\n\t$SCRIPT_NAME <DATA_FOLDER> <SUB_ID> <SEQ_order>\nexample:\n\t$SCRIPT_NAME /home/user/data 1234B 11001"
 	echo -e "\nAnalysis contains folowing steps:"
 	echo -e "\t1) Bias field correction of orignal T2TRA and T2SAG images using N4BiasFieldCorrection tool (part of ANTS) and thresholding of low values"
 	echo -e "\t2) Slice-by-slice correction of zig-zag artifact of T2TRA image (could be switched off inside script)"

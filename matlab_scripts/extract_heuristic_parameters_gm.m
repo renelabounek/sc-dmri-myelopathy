@@ -1,3 +1,8 @@
+%% SIGNATURE
+% Implemented by Rene Labounek
+% fMRI Laboratory, Department of Neurology, Palacky University and University Hospital Olomouc, Czech Republic
+% Division of Clinical Behavioral Neuroscience, Department of Pediatrics, University of Minnesota, Minneapolis, USA
+% contact emails: rlaboune@umn.edu, rene.labounek@gmail.com
 clear all;
 %% INITIALIZE AND DEFINE RESULT SOURCE AND SAVE FILE
 % !!!! EXECUTION OF THE extract_descriptive_statistics.m AND extract_heuristic_parameters_gm.m SCRIPTS MUST

@@ -1,11 +1,18 @@
+%% SIGNATURE
+% Implemented by Rene Labounek
+% fMRI Laboratory, Department of Neurology, Palacky University and University Hospital Olomouc, Czech Republic
+% Division of Clinical Behavioral Neuroscience, Department of Pediatrics, University of Minnesota, Minneapolis, USA
+% contact emails: rlaboune@umn.edu, rene.labounek@gmail.com
 clear all;
 %% INITIALIZE AND DEFINE RESULT SOURCE AND SAVE FILE
 % !!!! EXECUTION OF THE extract_descriptive_statistics.m SCRIPT MUST
 % PREVENT THIS SCRIPT CALL, OTHERWISE THE CURRENT SCRIPT WILL NOT WORK !!!!
-workspace_file=fullfile('/home/user/results','dmri_comparison_pvaltable.mat');
+save_path='/home/user/results';
+workspace_file=fullfile(save_path,'dmri_comparison_pvaltable.mat');
 load(workspace_file);
 % The original loaded workspace_file can have set different value,therefore it is defined here twice.
-workspace_file=fullfile('/home/user/results','dmri_comparison_pvaltable.mat');
+save_path='/home/user/results';
+workspace_file=fullfile(save_path,'dmri_comparison_pvaltable.mat');
 %% DOMAIN AND LIMITS INITIALIZATION
 % Define dMRI metric domains for fill commands plotting confidece intervals.
 FA_ax = [0, FAx_vec, FAx_vec(end:-1:1)];

@@ -1,5 +1,10 @@
-%% INPUT PARAMETER SETTINGS
+%% SIGNATURE
+% Implemented by Rene Labounek
+% fMRI Laboratory, Department of Neurology, Palacky University and University Hospital Olomouc, Czech Republic
+% Division of Clinical Behavioral Neuroscience, Department of Pediatrics, University of Minnesota, Minneapolis, USA
+% contact emails: rlaboune@umn.edu, rene.labounek@gmail.com
 clear all;
+%% INPUT PARAMETER SETTINGS
 data_folder='/home/user/data'; %inside data folder there are subject specific subfoldres S0001, S0002,..., S00067
 % as all uploded at URL: https://hdl.handle.net/20.500.12618/0000-5c13d342-4798-41d9-8d2a-bf750ab79fdb
 

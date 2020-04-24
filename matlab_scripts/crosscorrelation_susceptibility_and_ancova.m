@@ -8,14 +8,12 @@ clear all;
 close all;
 %% dMRI parameter settings
 save_path='/home/user/results';
-demographic_file='/home/user/data/subject_table.xlsx';
+demographic_file='/home/user/subject_table.xlsx';
 thr_cor=0.05;
 workspace_file = fullfile(save_path,'dmri_comparison_pvaltable.mat');
 load(workspace_file);
 [num, txt, raw] = xlsread(demographic_file);
 age=[raw{2:end,4}]';
-CR=[raw{2:end,5}]';
-CSA=[raw{2:end,6}]';
 cols = size(raw,2);
 %% Indexes and lsit of variables significant between-group differences for 60 dMRI acquisitions used in Labounek et al. (2020) Scientific Reports
 % Last 6 variables are measures of sscueptibility artifact levels from C3-C6, C3 and C5-C6 regions of interest

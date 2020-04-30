@@ -4,6 +4,9 @@ Folder containing all implemented or developed quantitative spinal cord imaging 
 ### Please, cite as:
 Labounek R, Valosek J, Horak T, Svatkova A, Bednarik P, Vojtisek L, Horakova M, Nestrasil I, Lenglet C, Cohen-Adad J, Bednarik J and Hlustik P. HARDI-ZOOMit protocol improves specificity to microstructural changes in presymptomatic myelopathy. Scientific Reports [Revised; Under review]
 
+### Manual:
+Manual draft is available here: https://docs.google.com/document/d/1aH6JeInpfyZSBGaTrPBRDYx8dcrZ15qoXl1m46oKD1s/edit?usp=sharing
+
 ### Requirements:
 `Spinal Cord Toolbox v3.2.3` - `git clone --branch v3.2.3 https://github.com/neuropoly/spinalcordtoolbox.git`
 

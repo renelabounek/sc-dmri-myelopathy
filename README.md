@@ -7,6 +7,13 @@ Labounek R, Valosek J, Horak T, Svatkova A, Bednarik P, Vojtisek L, Horakova M, 
 ### Manual:
 Manual draft is available here: https://docs.google.com/document/d/1aH6JeInpfyZSBGaTrPBRDYx8dcrZ15qoXl1m46oKD1s/edit?usp=sharing
 
+### Data:
+Acquired raw data are available here: https://hdl.handle.net/20.500.12618/0000-5c13d342-4798-41d9-8d2a-bf750ab79fdb
+If you keep the data folder structure as it is, all bash or matlab scripts should work properly.
+
+### Contact us:
+If you will find some issue in code or data processing at your site, please do not hestiate to contact us at following email addresses: rlaboune@umn.edu, jan.valosek@fnol.cz
+
 ### Requirements:
 `Spinal Cord Toolbox v3.2.3` - `git clone --branch v3.2.3 https://github.com/neuropoly/spinalcordtoolbox.git`
 

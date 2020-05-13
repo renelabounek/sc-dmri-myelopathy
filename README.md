@@ -9,6 +9,7 @@ Manual draft is available here: https://docs.google.com/document/d/1aH6JeInpfyZS
 
 ### Data:
 Acquired raw data are available here: https://hdl.handle.net/20.500.12618/0000-5c13d342-4798-41d9-8d2a-bf750ab79fdb
+
 If you keep the data folder structure as it is, all bash or matlab scripts should work properly.
 
 ### Contact us:

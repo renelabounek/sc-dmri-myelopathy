@@ -13,7 +13,7 @@ Acquired raw data are available here: https://hdl.handle.net/20.500.12618/0000-5
 If you keep the data folder structure as it is, all bash or matlab scripts should work properly.
 
 ### Contact us:
-If you will find some issue in code or data processing at your site, please do not hestiate to contact us at following email addresses: rlaboune@umn.edu, jan.valosek@fnol.cz
+If you will find some issue in code or data processing at your site, please do not hestiate to contact us at following email addresses: rlaboune@umn.edu, jan.valosek@fnol.cz; and we will try to help you to solve the problem.
 
 ### Requirements:
 `Spinal Cord Toolbox v3.2.3` - `git clone --branch v3.2.3 https://github.com/neuropoly/spinalcordtoolbox.git`

@@ -41,13 +41,6 @@ Copyright 2016-2020 Rene Labounek (1,2,3,4), Jan Valosek (1,2) and Petr Hlustik 
 
 4 - University of Minnesota, Minneapolis, US
 
-This file is part of sc-dmri-myelopathy available at: https://github.com/renelabounek/sc-dmri-myelopathy
-
-Please, cite sc-dmri-myelopathy as:
-Labounek R, Valosek J, Horak T, Svatkova A, Bednarik P, Vojtisek L, Horakova M, Nestrasil I,
-Lenglet C, Cohen-Adad J, Bednarik J and Hlustik P. HARDI-ZOOMit protocol improves specificity
-to microstructural changes in presymptomatic myelopathy. Scientific Reports [Revised; Under review]
-
 sc-dmri-myelopathy is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or

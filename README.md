@@ -29,7 +29,7 @@ If you will find some issue in code or data processing at your site, please repo
 `HTCondor` - https://research.cs.wisc.edu/htcondor/
 
 
-### Copyright statement
+### Copyright statement:
 
 Copyright 2016-2020 Rene Labounek (1,2,3,4), Jan Valosek (1,2) and Petr Hlustik (1,2)
 

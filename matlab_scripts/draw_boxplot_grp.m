@@ -20,8 +20,7 @@ function draw_boxplot_grp(x,group,ymin,ymax,ind,will_pvals,WillThr,triangle_pos,
 %
 % sc-dmri-myelopathy is free software: you can redistribute it and/or modify
 % it under the terms of the GNU General Public License as published by
-% the Free Software Foundation, either version 3 of the License, or
-% (at your option) any later version.
+% the Free Software Foundation, either version 3 of the License, or any later version.
 %
 % sc-dmri-myelopathy is distributed in the hope that it will be useful,
 % but WITHOUT ANY WARRANTY; without even the implied warranty of

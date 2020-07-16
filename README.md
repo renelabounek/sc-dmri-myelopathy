@@ -2,7 +2,7 @@
 Folder containing all implemented or developed quantitative spinal cord imaging pipelines and data analyses
 
 ### Please, cite as:
-Labounek R, Valosek J, Horak T, Svatkova A, Bednarik P, Vojtisek L, Horakova M, Nestrasil I, Lenglet C, Cohen-Adad J, Bednarik J and Hlustik P. HARDI-ZOOMit protocol improves specificity to microstructural changes in presymptomatic myelopathy. Scientific Reports [Revised; Under review]
+Labounek R, Valosek J, Horak T, Svatkova A, Bednarik P, Vojtisek L, Horakova M, Nestrasil I, Lenglet C, Cohen-Adad J, Bednarik J and Hlustik P. HARDI-ZOOMit protocol improves specificity to microstructural changes in presymptomatic myelopathy. Scientific Reports [In Press]
 
 ### Manual:
 Manual draft is available here: https://docs.google.com/document/d/1aH6JeInpfyZSBGaTrPBRDYx8dcrZ15qoXl1m46oKD1s/edit?usp=sharing
